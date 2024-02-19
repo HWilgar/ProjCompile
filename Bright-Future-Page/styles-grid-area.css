@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  /** 👆 Lets reset all margin and paddings */
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  /** 👆 Give a nice font */
+  
+  img {
+    width: 100%;
+  }
+  /** 👆 Lets make all images to be responsive */
+  
+  .container {
+    display: grid;
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "header header header"
+        "banner banner sidebar"
+        "popular popular sidebar"
+        "trendings trendings trendings";
+    gap: 25px;
+  }
+  /** 👆 Your initial style of container */
+
+/* ----- HEADER ----- */
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    max-width: 12%;
+    height: auto;
+}
+
+header nav,
+header nav ul{
+    display: flex;
+}
+
+header nav ul li{
+    list-style: none;
+    padding: 0 10px;
+}
+
+/* ----- BANNER ----- */
+
+.banner{
+    grid-area: banner;
+}
+
+/* ----- ASIDE ----- */
+
+aside{
+    grid-area: sidebar;
+    background-color: #4A2D6E;
+    color: #fff;
+    padding: 15px;
+}
+
+aside > h2{
+    color: #A7982B;
+    font-size: 32px;
+}
+
+aside article{
+    margin-top: 10px;
+}
+
+/* ----- POPULAR ----- */
+
+.popular{
+    grid-area: popular;
+    display: flex;
+}
+
+.popular div{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+    align-items: start;
+}
+
+.popular div a{
+    background-color: #9051A8;
+    color: #fff;
+    padding: 8px;
+    font-size: large;
+}
+
+/* ----- TRENDINGS ----- */
+
+.trendings{
+    grid-area: trendings;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trendings article{
+    max-width: 32%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.trendings article div{
+    max-width: 60%;
+}
+
+.trendings article img{
+    padding-right: 10px;
+    max-width: 40%;
+    max-height: auto;
+}
+
+
+  
