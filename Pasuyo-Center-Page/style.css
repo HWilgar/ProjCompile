@@ -1,0 +1,12 @@
+.parent-list > .list-item{
+    background-color: #f0f0f0;
+}
+
+.child-list{
+    padding-left: 15px;
+}
+
+.child-list > .list-item {
+    background-color: #e0e0e0;
+}
+
